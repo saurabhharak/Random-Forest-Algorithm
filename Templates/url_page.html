@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Bank Note Authentication{% endblock %}
+
+{% block content %}
+<form action="#", method="post">
+    <label for="variance">Enter an Variance:</label>
+   
+    <input type="number" name="variance" id="variance"
+       placeholder=""
+       pattern="" size="50"
+       required>
+    <br>
+    <label for="skewness">Enter an Skewness:</label>
+    <input type="number" name="skewness" id="skewness"
+       placeholder=""
+       pattern="" size="50"
+       required>
+    <br>
+    <label for="curtosis">Enter an Curtosis:</label>
+    <input type="number" name="curtosis" id="curtosis"
+       placeholder=""
+       pattern="" size="50"
+       required>
+    <br>
+    <label for="entropy">Enter an Entropy:</label>
+    <input type="number" name="entropy" id="entropy"
+       placeholder=""
+       pattern="" size="50"
+       required>
+    <br>
+    <input type="submit" value="submit" class="btn btn-primary">
+</form>
+{% endblock %}
