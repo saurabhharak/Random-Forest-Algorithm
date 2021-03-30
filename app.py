@@ -20,7 +20,7 @@ def home():
         classifier = pickle.load(pickle_in)
         prediction = classifier.predict([[variance,skewness,curtosis,entropy]])
      
-        return "The Predicated Value is :"+ str(prediction)
+        return render_template("url_page.html",outputt = "The Predicated Value is ${}".format(prediction))
      
     else:
         return render_template("url_page.html")
