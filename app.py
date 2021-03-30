@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request,render_template
 import random
 import string
 import os
@@ -8,9 +8,13 @@ import numpy as np
 
 app = Flask(__name__)
 
- 
-@app.route('/',methods=['POST','GET'] )
+@app.route('/')
 def home():
+    return render_template("url_page.html")
+
+
+@app.route('/predi',methods=['POST','GET'] )
+def home1():
     if request.method == 'POST':
         variance = request.form["variance"]
         skewness = request.form["skewness"]
