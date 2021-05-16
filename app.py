@@ -13,7 +13,7 @@ def home():
     return render_template("url_page.html")
 
 
-@app.route('/predi',methods=['POST','GET'] )
+@app.route('/predi/',methods=['POST','GET'] )
 def home1():
     if request.method == 'POST':
         variance = request.form["variance"]
